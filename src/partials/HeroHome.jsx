@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Modal from '../utils/Modal';
 
-import HeroImage from '../images/hero-image-01.jpg';
+import HeroImage from '../images/hero-image.jpeg';
+import FeatImage01 from '../images/logoIdeas.png';
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -38,29 +39,22 @@ function HeroHome() {
         </div>
 
         {/* Hero content */}
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">
-              Landing template for startups
-            </h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
-              Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-            </p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">
-                  Start free trial
-                </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
-                  Learn more
-                </a>
-              </div>
-            </div>
+        <div className="relative pt-10 pb-10 md:pt-10 md:pb-16 ">
+          <div className=' mx-auto backdrop-blur-xl rounded-full w-fit'>
+          <img className="max-w-full  md:max-w-none h-auto animate-pulse" src={FeatImage01} width="400" height="400" alt="Features 01" />
+
           </div>
 
+
+          {/* Section header */}
+          <div className="max-w-3xl mx-auto text-center pb-4 md:pb-16">
+            <h1 className="h1 mb-4 font-mono" data-aos="fade-up">
+              Ideas Nuestras
+            </h1>
+            <p className="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="200">
+              Ambientación para eventos y fiestas.
+            </p>
+          </div>
           {/* Hero image */}
           <div>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
@@ -99,7 +93,7 @@ function HeroHome() {
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
                 <video ref={video} className="absolute w-full h-full" width="1920" height="1080" loop autoPlay controls>
-                  <source src="/videos/video.mp4" type="video/mp4" />
+                  <source src="/videos/clip.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

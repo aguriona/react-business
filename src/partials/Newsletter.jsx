@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Newsletter() {
   return (
@@ -21,19 +22,44 @@ function Newsletter() {
             </svg>
           </div>
 
+
+
           <div className="relative flex flex-col lg:flex-row justify-between items-center">
 
-            {/* CTA content */}
-            <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              <h3 className="h3 text-white mb-2">Stay in the loop</h3>
-              <p className="text-purple-200 text-lg">Join our newsletter to get top news before anyone else.</p>
-            </div>
+ 
 
+            {/* CTA content */}
+            <div className="flex justify-center align-middle mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
+              <h3 className="h3 text-white mb-2">Seguinos en las redes</h3>
+
+                         {/* Social links */}
+            <ul className="flex  mb-4 md:order-1 md:ml-4 md:mb-0">
+              <li className="ml-4">
+                <Link to="https://www.facebook.com/nati.disteffano" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="Facebook">
+                  <svg className="w-12 h-12 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z" />
+                  </svg>
+                </Link>
+              </li>
+              <li className="ml-4">
+                <Link to="#" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="Instagram">
+                  <svg className="w-12 h-12 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20.145" cy="11.892" r="1" />
+                    <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
+                    <path d="M20 24h-8c-2.056 0-4-1.944-4-4v-8c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zm-8-14c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2v-8c0-.935-1.065-2-2-2h-8z" />
+                  </svg>
+                </Link>
+              </li>
+
+            </ul>
+
+            </div>
+              <p className="text-purple-200 text-lg">Ingresa tu e-mail para que nos pongamos en contacto con vos.</p>
             {/* CTA form */}
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="Your best email…" aria-label="Your best email…" />
-                <a className="btn text-purple-600 bg-purple-100 hover:bg-white shadow" href="#0">Subscribe</a>
+                <input type="email" className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="email…" aria-label="email…" />
+                <a className="btn text-purple-600 bg-purple-100 hover:bg-white shadow" href="#0">Enviar</a>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
